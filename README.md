@@ -31,7 +31,7 @@ Based on the findings, certain features showed strong correlations with the sale
 In the interest of time to address the challenge of the dataset's dimensionality, I relied on feature selection techniques to identify the key features for predicting home prices. Initially, I applied Recursive Feature Elimination (RFE), which required a full day to execute and revealed that only 10 features were relevant. This finding influenced my decision to opt for forward feature selection because it was less computationally expensive and improved overall efficiency. I decided don’t focus on what you want to eliminate, focus more on what you want to keep.
 To select features, forward stepwise selection was used for linear models, feature importance for tree-based models, and SelectFromModel for SVR and MLP models. These diverse feature selection techniques were chosen based on their computational efficiency and compatibility with each specific model.
 
-<h4 align="center"> Hyperparameter Tuning and Model Comparison </h4>
+<h4 align="center"> Hyperparameter Tuning & Model Comparison </h4>
 
 By utilizing forward feature selection, I observed a noticeable improvement in the model's predictive performance as specific features unique to each model were added. Among the top 5 models, namely XGBoost, Stacked Ensemble, LightGBM, Decision Tree, and Random Forest, all were tree-based models, outperforming linear models and deep learning. The hyperparameters of these top 5 models were fine-tuned using either GridsearchCV or RandomSearchCV.
 
