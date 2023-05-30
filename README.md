@@ -39,7 +39,7 @@ Based on the findings, certain features showed strong correlations with the sale
 </p>
 <h4 align="center"> Feature Selection </h4>
 
-In the interest of time to address the challenge of the dataset's dimensionality, I relied on feature selection techniques to identify the key features for predicting home prices. Initially, I applied Recursive Feature Elimination (RFE), which required a full day to execute and revealed that only 10 features were relevant. This finding influenced my decision to opt for forward feature selection because it was less computationally expensive and improved overall efficiency. I decided don’t focus on what you want to eliminate, focus more on what you want to keep.
+In the interest of time to address the challenge of the dataset's dimensionality, I relied on feature selection techniques to systematically identify the key features for predicting home prices. Initially, I applied Recursive Feature Elimination (RFE), which required a full day to execute and revealed that only 10 features were relevant. This finding influenced my decision to opt for forward feature selection because it was less computationally expensive and improved overall efficiency. I decided don’t focus on what you want to eliminate, focus more on what you want to keep.
 
 To select features, forward stepwise selection was used for linear models, feature importance for tree-based models, and SelectFromModel for SVR and MLP models. These diverse feature selection techniques were chosen based on their computational efficiency and compatibility with each specific model.
 
