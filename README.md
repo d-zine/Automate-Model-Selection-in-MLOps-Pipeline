@@ -37,7 +37,7 @@ By utilizing forward feature selection, I observed a noticeable improvement in t
 
 Tree-based models excel at capturing interactions and non-linearities within the data. Their ability to recursively split the data into smaller subgroups based on the most important variables allows them to effectively capture complex patterns. On the other hand, linear models struggle to capture these non-linearities and interactions, leading to limitations in their performance.
 
-<h4 align="center"> Key Features </h4>
+<h4 align="center"> Automate Model Selection in MLOps Pipeline with Key Features </h4>
 
 Utilizing tree-based models, including the stacked ensemble, in the process of forward feature selection, the following features were selected across the top 5 models (Decision Tree, Random Forest, LightGBM, Stacked Ensemble, and XGBoost):
 - Four features (OverallQual, GrLivArea, TotalBsmtSF, and 1stFlrSF) were chosen 3 times.
@@ -45,8 +45,8 @@ Utilizing tree-based models, including the stacked ensemble, in the process of f
 
 Based on these specific features, I automated the model selection process for both the 4 best and 10 best features, aiming to optimize the R^2 value.
 
-<h4 align="center"> Automate Model Selection in MLOps Pipeline </h4>
-After examining the boxplot of R^2 values for the training data and the R^2 value for the test data using KFold CV=5, it was clear that XGBoost performed the best among all the models in terms of stability. XGBoost also outperformed other models in minimizing the MAE test error, which measures the average difference between predicted and actual values. The model that achieves the lowest MAE test errors indicates that its predictions are the closest to the actual sale prices. Based on these findings, XGBoost emerged as the preferred model and underwent parameter optimization. By analyzing the residuals where the predicted sale price exceeded the actual price, a list of undervalued properties, along with their respective neighborhoods, was generated.
+<h4 align="center"> Winner Model: XGBoost </h4>
+After examining the boxplot of R^2 values for the training data and the R^2 value for the test data using KFold CV=5, it was clear that XGBoost performed the best among all the models in terms of stability. XGBoost also outperformed other models in minimizing the MAE test error, which measures the average difference between predicted and actual values. The model that achieves the lowest MAE test errors indicates that its predictions are the closest to the actual sale prices. Based on these findings, XGBoost emerged as the preferred model and underwent hyperparameter tuning. By analyzing the residuals where the predicted sale price exceeded the actual price, a list of undervalued properties, along with their respective neighborhoods, was generated.
 
 <h4 align="center"> Summary & Actionable Insights </h4>
 In summary, the top 5 tree-based models identified several key features that significantly influence the prediction of the target variable (home prices). These features include OverallQual, GrLivArea, TotalBsmtSF, 1stFlrSF, GarageArea, YearBuilt, YearRemodAdd, BsmtFinSF1, BsmtUnfSF, and Fireplaces. To enhance the value of undervalued properties, prioritize investments that focus on expanding living space, utilizing high-quality materials, showcasing superior craftsmanship, and creating an elegant appearance for long-term appeal are your best bets. It is also a good idea to visit undervalued properties and collaborate with real estate agents and appraisers to gain insights into external factors that the model may not capture. Such factors can include the proximity of houses to amenities such as public transportation, schools, parks, cafes, and shops, which can contribute to potential price appreciation.
