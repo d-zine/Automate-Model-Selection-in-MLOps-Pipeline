@@ -59,7 +59,7 @@ Utilizing tree-based models, including the stacked ensemble, in the process of f
 - Four features (OverallQual, GrLivArea, TotalBsmtSF, and 1stFlrSF) were chosen 3 times.
 - Six Features (GarageArea, YearBuilt, YearRemodAdd, BsmtFinSF1, BsmtUnfSF, and Fireplaces) were selected twice.
 
-Based on these specific features, I automated the model selection process for both the 4 best and 10 best features, aiming to optimize the R^2 value.
+Based on these specific features, I automated the model selection process for both the 4 best and 10 best features, aiming to minimize the MAE test error.
 
 <h4 align="center"> Winner Model: XGBoost </h4>
 After examining the boxplot of R^2 values for the training data and the R^2 value for the test data using KFold CV=5, it was clear that XGBoost performed the best among all the models in terms of stability. XGBoost also outperformed other models in minimizing the MAE test error, which measures the average difference between predicted and actual values. The model that achieves the lowest MAE test errors indicates that its predictions are the closest to the actual sale prices. Based on these findings, XGBoost emerged as the preferred model and underwent hyperparameter tuning. By analyzing the residuals where the predicted sale price exceeded the actual price, a list of undervalued properties, along with their respective neighborhoods, was generated.
