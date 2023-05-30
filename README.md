@@ -30,9 +30,17 @@ During EDA, I conducted univariate scatter plots between the numerical features 
 
 Based on the findings, certain features showed strong correlations with the sale price, indicated by a high R^2 value or a high beta coefficient. Noteworthy features that stood out were OverallQual, FullBath, TotalBSMTSF, 1stFlrSF, Fireplaces, YearBuilt, GrLivArea, YearRemodAdd, GarageArea, and BsmtFullBath. It is important to note that while some beta coefficients may appear low, their impact on SalePrice is significant because they are being multiplied by a range of high units like square footage or year.
 
+<p align="center">
+<img src="Images/Univariate Plot 1.jpg" width=850>
+</p>
+
+<p align="center">
+<img src="Images/Univariate Plot 3.jpg" width=850>
+</p>
 <h4 align="center"> Feature Selection </h4>
 
 In the interest of time to address the challenge of the dataset's dimensionality, I relied on feature selection techniques to identify the key features for predicting home prices. Initially, I applied Recursive Feature Elimination (RFE), which required a full day to execute and revealed that only 10 features were relevant. This finding influenced my decision to opt for forward feature selection because it was less computationally expensive and improved overall efficiency. I decided don’t focus on what you want to eliminate, focus more on what you want to keep.
+
 To select features, forward stepwise selection was used for linear models, feature importance for tree-based models, and SelectFromModel for SVR and MLP models. These diverse feature selection techniques were chosen based on their computational efficiency and compatibility with each specific model.
 
 <h4 align="center"> Hyperparameter Tuning & Model Comparison </h4>
