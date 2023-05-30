@@ -22,7 +22,7 @@ It's important to note that scaling can ensure that predictor variables have the
 
 <h4 align="center"> Exploratory Data Analysis </h4>
 
-During EDA, I conducted univariate scatter plots between the numerical features and SalePrice. To enhance clarity, I added a linear regression line, including the Beta 1 coefficient and Pearson R to the plots. This approach allowed me to identify correlations between the features and the target variable, providing valuable insights into the key factors influencing the sale price of a house. I also used a heatmap to identify features with significant correlations to SalePrice and subsequently removed features with numerous null values (e.g., Alley, PoolQC, Fence, MiscFeatures) or features exhibiting indistinct trends (e.g., BedroomAbvGr, YrSold).
+During the exploratory data analysis (EDA) phase, I generated univariate scatter plots to examine the relationships between the numerical features and SalePrice. To improve clarity, I incorporated linear regression lines into the plots, including the Beta 1 coefficient and Pearson R. This approach enabled the identification of correlations between the features and the target variable, providing valuable insights into the key factors that influence the sale price of a house. Additionally, I utilized a heatmap to highlight features that exhibited significant correlations with SalePrice. Subsequently, I made the decision to eliminate features with a substantial number of null values (e.g., Alley, PoolQC, Fence, MiscFeatures) or features that displayed unclear patterns (e.g., BedroomAbvGr, YrSold).
 
 <p align="center">
 <img src="Images/Unknowns.png" width=600>
