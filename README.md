@@ -24,6 +24,10 @@ It's important to note that scaling can ensure that predictor variables have the
 
 During EDA, I conducted univariate scatter plots between the numerical features and SalePrice. To enhance clarity, I added a linear regression line, including the Beta 1 coefficient and Pearson R to the plots. This approach allowed me to identify correlations between the features and the target variable, providing valuable insights into the key factors influencing the sale price of a house. I also used a heatmap to identify features with significant correlations to SalePrice and subsequently removed features with numerous null values (e.g., Alley, PoolQC, Fence, MiscFeatures) or features exhibiting indistinct trends (e.g., BedroomAbvGr, YrSold).
 
+<p align="center">
+<img src="Images/Unknowns.png" width=600>
+</p>
+
 Based on the findings, certain features showed strong correlations with the sale price, indicated by a high R^2 value or a high beta coefficient. Noteworthy features that stood out were OverallQual, FullBath, TotalBSMTSF, 1stFlrSF, Fireplaces, YearBuilt, GrLivArea, YearRemodAdd, GarageArea, and BsmtFullBath. It is important to note that while some beta coefficients may appear low, their impact on SalePrice is significant because they are being multiplied by a range of high units like square footage or year.
 
 <h4 align="center"> Feature Selection </h4>
@@ -34,6 +38,10 @@ To select features, forward stepwise selection was used for linear models, featu
 <h4 align="center"> Hyperparameter Tuning & Model Comparison </h4>
 
 By utilizing forward feature selection, I observed a noticeable improvement in the model's predictive performance as specific features unique to each model were added. Among the top 5 models, namely XGBoost, Stacked Ensemble, LightGBM, Decision Tree, and Random Forest, all were tree-based models, outperforming linear models and deep learning. The hyperparameters of these top 5 models were fine-tuned using either GridsearchCV or RandomSearchCV.
+
+<p align="center">
+<img src="Images/Number of Features vs R^2 Score by Model.png" width=700>
+</p>
 
 Tree-based models excel at capturing interactions and non-linearities within the data. Their ability to recursively split the data into smaller subgroups based on the most important variables allows them to effectively capture complex patterns. On the other hand, linear models struggle to capture these non-linearities and interactions, leading to limitations in their performance.
 
@@ -47,6 +55,14 @@ Based on these specific features, I automated the model selection process for bo
 
 <h4 align="center"> Winner Model: XGBoost </h4>
 After examining the boxplot of R^2 values for the training data and the R^2 value for the test data using KFold CV=5, it was clear that XGBoost performed the best among all the models in terms of stability. XGBoost also outperformed other models in minimizing the MAE test error, which measures the average difference between predicted and actual values. The model that achieves the lowest MAE test errors indicates that its predictions are the closest to the actual sale prices. Based on these findings, XGBoost emerged as the preferred model and underwent hyperparameter tuning. By analyzing the residuals where the predicted sale price exceeded the actual price, a list of undervalued properties, along with their respective neighborhoods, was generated.
+
+<p align="center">
+<img src="Images/Minimize Test Error.png" width=400>
+</p>
+
+<p align="center">
+<img src="Images/Undervalued Homes.png" width=450>
+</p>
 
 <h4 align="center"> Summary & Actionable Insights </h4>
 In summary, the top 5 tree-based models identified several key features that significantly influence the prediction of the target variable (home prices). These features include OverallQual, GrLivArea, TotalBsmtSF, 1stFlrSF, GarageArea, YearBuilt, YearRemodAdd, BsmtFinSF1, BsmtUnfSF, and Fireplaces. To enhance the value of undervalued properties, prioritize investments that focus on expanding living space, utilizing high-quality materials, showcasing superior craftsmanship, and creating an elegant appearance for long-term appeal are your best bets. It is also a good idea to visit undervalued properties and collaborate with real estate agents and appraisers to gain insights into external factors that the model may not capture. Such factors can include the proximity of houses to amenities such as public transportation, schools, parks, cafes, and shops, which can contribute to potential price appreciation.
