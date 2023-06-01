@@ -28,7 +28,7 @@ During EDA, I generated univariate scatter plots to examine the relationships be
 <img src="Images/Unknowns.png" width=600>
 </p>
 
-Based on the findings, certain features showed strong correlations with the sale price, indicated by a high R^2 value or a high beta coefficient. Noteworthy features that stood out were OverallQual, FullBath, TotalBSMTSF, 1stFlrSF, Fireplaces, YearBuilt, GrLivArea, YearRemodAdd, GarageArea, and BsmtFullBath. It is important to note that while some beta coefficients may appear low, their impact on SalePrice is significant because they are being multiplied by a range of high units like square footage or year.
+Based on the findings, certain features showed strong correlations with the sale price, indicated by a high R^2 value or a high beta 1 coefficient. Noteworthy features that stood out were OverallQual, FullBath, TotalBSMTSF, 1stFlrSF, Fireplaces, YearBuilt, GrLivArea, YearRemodAdd, GarageArea, and BsmtFullBath. It is important to note that while some beta coefficients may appear low, their impact on SalePrice is significant because they are being multiplied by a range of high units like square footage or year.
 
 <p align="center">
 <img src="Images/Univariate Plot 1.jpg" width=850>
