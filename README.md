@@ -81,5 +81,5 @@ Here are additional approaches that can enhance the project even further. For in
 
 <h4 align="center"> Conclusion </h4>
 
-In conclusion, incorporating machine learning techniques into the homebuying process can enhance decision-making and offer valuable insights for buyers. While these methods can provide useful guidance, it's important to remember that no model or prediction can guarantee future outcomes in a volatile real estate market. Ultimately, a comprehensive approach that combines machine learning with traditional research, expert advice, and personal preferences will help buyers make well-informed choices and navigate the complexities of purchasing a home.
+In conclusion, incorporating machine learning techniques into the homebuying process can enhance decision-making and offer valuable insights for buyers. While these methods can provide useful guidance, it's important to remember that no model or prediction can be solely relied upon in a dynamic real estate market. Instead, buyers should adopt a comprehensive approach that combines machine learning with traditional research, expert guidance, and personal preferences. This holistic strategy will empower buyers to make informed choices and effectively navigate the intricacies involved in purchasing a home.
  
