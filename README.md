@@ -22,13 +22,9 @@ It's important to note that scaling can ensure that predictor variables have the
 
 <h4 align="center"> Exploratory Data Analysis </h4>
 
-During EDA, I generated univariate scatter plots to examine the relationships between the numerical features and SalePrice. To improve clarity, I incorporated linear regression lines into the plots, including the Beta 1 coefficient and Pearson R. Displaying the Pearson R in the univariate scatterplots helped me identify the correlation between the feature and the target variable. The provided clues as to what were the key factors that influence the sale price of a house. Additionally, I utilized a heatmap to highlight features that exhibited significant correlations with SalePrice. I also used variation inflation factor (VIF) to drop some features that exhibited multicollinearity. Finally, I made the decision to eliminate features with many null values (e.g., Alley, PoolQC, Fence, MiscFeatures) or features that displayed unclear patterns (e.g., BedroomAbvGr, YrSold).
+During EDA, I generated univariate scatter plots to examine the relationships between the numerical features and SalePrice. To improve clarity, I incorporated linear regression lines into the plots, including the Beta 1 coefficient and Pearson R. Displaying the Pearson R in the univariate scatterplots helped me identify the correlation between the feature and the target variable. 
 
-<p align="center">
-<img src="Images/Unknowns.png" width=600>
-</p>
-
-Based on the findings, certain features showed strong correlations with the sale price, indicated by a high R^2 value or a high beta 1 coefficient. Noteworthy features that stood out were OverallQual, FullBath, TotalBSMTSF, 1stFlrSF, Fireplaces, YearBuilt, GrLivArea, YearRemodAdd, GarageArea, and BsmtFullBath. It is important to note that while some beta coefficients may appear low, their impact on SalePrice is significant because they are being multiplied by a range of high units like square footage or year.
+Based on the findings, certain features showed strong correlations with the sale price, indicated by a high R^2 value or a high beta 1 coefficient. Noteworthy features that stood out were OverallQual, FullBath, TotalBSMTSF, 1stFlrSF, Fireplaces, YearBuilt, GrLivArea, YearRemodAdd, GarageArea, and BsmtFullBath. It is important to note that while some beta coefficients may appear low, their impact on SalePrice is significant because they are being multiplied by a range of high units like square footage or year. The provided clues as to what were the key factors that influence the sale price of a house. 
 
 <p align="center">
 <img src="Images/Univariate Plot 1.jpg" width=850>
@@ -37,6 +33,14 @@ Based on the findings, certain features showed strong correlations with the sale
 <p align="center">
 <img src="Images/Univariate Plot 3.jpg" width=850>
 </p>
+
+Additionally, I utilized a heatmap to highlight features that exhibited significant correlations with SalePrice. I also used variation inflation factor (VIF) to drop some features that exhibited multicollinearity. Finally, I made the decision to eliminate features with many null values (e.g., Alley, PoolQC, Fence, MiscFeatures) or features that displayed unclear patterns (e.g., BedroomAbvGr, YrSold).
+
+<p align="center">
+<img src="Images/Unknowns.png" width=600>
+</p>
+
+
 <h4 align="center"> Feature Selection </h4>
 
 In the interest of time to address the challenge of the dataset's dimensionality, I relied on feature selection techniques to systematically identify the key features for predicting home prices. Initially, I applied Recursive Feature Elimination (RFE), which required a full day to execute and revealed that only 10 features were relevant. This finding influenced my decision to opt for forward feature selection because it was less computationally expensive and improved overall efficiency. I decided don’t focus on what you want to eliminate, focus more on what you want to keep.
